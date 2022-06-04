@@ -2,6 +2,7 @@ import useRequest from './hooks/useRequest'
 
 import Layout from './components/Layout'
 import Character from './components/Character'
+import ActionButtons from './components/ActionButtons'
 
 function App() {
 	const { loading, error } = useRequest({ endpoint: 'characters' })
@@ -10,6 +11,7 @@ function App() {
 
 	return (
 		<Layout>
+			<ActionButtons />
 			<Character />
 		</Layout>
 	)

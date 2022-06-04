@@ -1,7 +1,9 @@
 @import './variables/colors.scss';
 
-@import './components/Button.scss';
+@import './components/Buttons.scss';
+@import './components/Icon.scss';
 @import './components/Layout.scss';
+@import './components/ActionButtons.scss';
 
 * {
 	box-sizing: border-box;
