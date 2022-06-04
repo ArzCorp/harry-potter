@@ -1,6 +1,8 @@
 .button {
 	width: 100%;
-	min-width: 140px;
+	min-width: max-content;
+	max-width: 288px;
+	cursor: pointer;
 	background-color: $dark-opacity-color;
 	color: white;
 	padding: 20px 56px;

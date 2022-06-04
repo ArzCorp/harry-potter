@@ -1,18 +1,14 @@
-import useRequest from './hooks/useRequest'
-
 import Layout from './components/Layout'
-import Character from './components/Character'
+import Characters from './components/Characters'
 import ActionButtons from './components/ActionButtons'
+import Header from './components/Header'
 
 function App() {
-	const { loading, error } = useRequest({ endpoint: 'characters' })
-
-	if (loading || error) return <p>{error || 'Cargando...'}</p>
-
 	return (
 		<Layout>
 			<ActionButtons />
-			<Character />
+			<Header />
+			<Characters />
 		</Layout>
 	)
 }

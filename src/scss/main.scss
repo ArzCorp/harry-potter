@@ -1,12 +1,20 @@
 @import './variables/colors.scss';
+@import './variables/fonts.scss';
 
 @import './components/Buttons.scss';
 @import './components/Icon.scss';
 @import './components/Layout.scss';
 @import './components/ActionButtons.scss';
+@import './components/Filters.scss';
+@import './components/Header.scss';
 
 * {
 	box-sizing: border-box;
 	padding: 0px;
 	margin: 0px;
+}
+
+html {
+	font-family: $font-style;
+	font-size: 16px;
 }
