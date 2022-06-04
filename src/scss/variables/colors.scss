@@ -1,0 +1,38 @@
+/* BASE COLORS */
+
+$dark-color: #081f32;
+$dark-opacity-color: rgba(0, 0, 0, 0.6);
+$gray-color: #cccccc;
+$orange-color: #ff0000;
+$orange-light-color: #fed482;
+$green-color: #1c792b;
+$green-light-color: #82e95e;
+$blue-color: #0597b7;
+$blue-light-color: #66d1ff;
+$yellow-color: #ffc700;
+$yellow-light-color: #fff388;
+$purple-color: #6b63b5;
+$purple-opacity-color: rgba(107, 99, 181, 0.6);
+
+/* LINEAR GRADIENTS */
+
+$gradient-orange-color: linear-gradient(
+	135deg,
+	$orange-color 0%,
+	$orange-light-color 100%
+);
+$gradient-green-color: linear-gradient(
+	135deg,
+	$green-color 0%,
+	$green-light-color 100%
+);
+$gradient-blue-color: linear-gradient(
+	135deg,
+	$blue-color 0%,
+	$blue-light-color 100%
+);
+$gradient-yellow-color: linear-gradient(
+	135deg,
+	$yellow-color 0%,
+	$yellow-light-color 100%
+);
