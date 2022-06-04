@@ -1,0 +1,9 @@
+@import './variables/colors.scss';
+
+@import './components/Button.scss';
+
+.character {
+	width: 200px;
+	height: 200px;
+	background: $gradient-yellow-color;
+}
