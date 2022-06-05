@@ -1,0 +1,10 @@
+.characters {
+	&__container {
+		margin-top: 94px;
+		display: flex;
+		justify-content: center;
+		row-gap: 51px;
+		column-gap: 47px;
+		flex-wrap: wrap;
+	}
+}

@@ -1,13 +1,19 @@
-import { useSelector } from 'react-redux'
+import useRequest from '../hooks/useRequest'
 
 import Filters from './Filters'
+import Character from './Character'
 
-export default function Character() {
-	const state = useSelector((state) => state)
+export default function Characters() {
+	const { data } = useRequest({ endpoint: 'characters' })
 
 	return (
-		<div>
+		<div className="characters">
 			<Filters />
+			<div className="characters__container">
+				{data.map((item) => (
+					<Character key={item.name} {...item} />
+				))}
+			</div>
 		</div>
 	)
 }
