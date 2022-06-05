@@ -1,0 +1,14 @@
+.layout {
+	width: 100%;
+	min-height: 100vh;
+	background-image: url('./src/img/background.png');
+	background-size: 100vw auto;
+	background-repeat: no-repeat;
+	background-color: black;
+	background-position: top;
+	&__container {
+		width: 90%;
+		margin: 0 auto;
+		padding: 20px 0;
+	}
+}
