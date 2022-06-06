@@ -10,13 +10,14 @@ export default function Options({
 			<label className="options__label">{label}</label>
 			<div className="options__container">
 				{options.map((option) => (
-					<div className="options__option">
+					<div key={option.id} className="options__option">
 						<input
-							key={option.id}
 							type="radio"
 							name={name}
 							checked={value === option.value}
-							onChange={onChange}
+							onChange={() =>
+								onChange({ target: { name, value: option.value } })
+							}
 						/>
 						<p>{option.label}</p>
 					</div>

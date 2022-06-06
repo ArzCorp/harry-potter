@@ -1,9 +1,9 @@
 export default function filterReducer(state = 'characters', action) {
 	switch (action.type) {
 		case 'STAFF':
-			return 'staff'
+			return 'characters?hogwartsStudent=false'
 		case 'STUDENTS':
-			return 'students'
+			return 'characters?hogwartsStudent=true'
 		case 'ALL':
 			return 'characters'
 		default:

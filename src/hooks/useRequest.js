@@ -7,7 +7,7 @@ export default function useRequest({ endpoint, method = 'GET', ...args }) {
 	const [error, setError] = useState(null)
 	const [data, setData] = useState([])
 
-	const request = async () => {
+	const request = async (body) => {
 		const api = URL + endpoint
 
 		setLoading(true)
@@ -17,6 +17,7 @@ export default function useRequest({ endpoint, method = 'GET', ...args }) {
 				headers: {
 					'Content-Type': 'application/json',
 				},
+				body: JSON.stringify(body),
 				...args,
 			})
 			const currentData = await response.json()

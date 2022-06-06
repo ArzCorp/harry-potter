@@ -10,13 +10,13 @@ export default function Filters() {
 			<h2 className="filters__title">Selecciona tu filtro</h2>
 			<div className="filters__buttons">
 				<Button
-					active={filter === 'students'}
+					active={filter.includes('true')}
 					onClick={() => dispatch({ type: 'STUDENTS' })}
 				>
 					ESTUDIANTES
 				</Button>
 				<Button
-					active={filter === 'staff'}
+					active={filter.includes('false')}
 					onClick={() => dispatch({ type: 'STAFF' })}
 				>
 					STAFF
