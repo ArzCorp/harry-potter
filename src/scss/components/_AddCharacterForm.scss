@@ -1,0 +1,18 @@
+.character-form {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	&__container {
+		display: flex;
+		gap: 35px;
+	}
+	&__col {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	&__button {
+		width: 288px;
+		margin: 0 auto;
+	}
+}

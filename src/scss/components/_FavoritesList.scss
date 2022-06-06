@@ -1,0 +1,33 @@
+.favorites-list {
+	display: none;
+	position: absolute;
+	width: 100%;
+	max-height: 300px;
+	overflow-y: auto;
+	z-index: 10;
+	top: 33px;
+	left: 0;
+	right: 0;
+	padding: 13px;
+	padding-bottom: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: $purple-color;
+	color: white;
+	@media (max-width: 720px) {
+		height: 200px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		top: -198px;
+	}
+	&--show {
+		@extend .favorites-list;
+		display: block;
+	}
+	&__no-favorites {
+		text-align: center;
+		padding-bottom: 10px;
+	}
+}
