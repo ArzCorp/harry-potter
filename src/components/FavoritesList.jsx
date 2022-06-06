@@ -1,34 +1,20 @@
+import { useSelector } from 'react-redux'
+
 import Favorite from './Favorite'
 
-const favorites = [
-	{
-		name: 'Harry Potter',
-		species: 'human',
-		gender: 'male',
-		house: 'Gryffindor',
-		dateOfBirth: '31-07-1980',
-		yearOfBirth: 1980,
-		ancestry: 'half-blood',
-		eyeColour: 'green',
-		hairColour: 'black',
-		wand: { wood: 'holly', core: 'phoenix feather', length: 11 },
-		patronus: 'stag',
-		hogwartsStudent: true,
-		hogwartsStaff: false,
-		actor: 'Daniel Radcliffe',
-		alive: true,
-		image: 'http://hp-api.herokuapp.com/images/harry.jpg',
-	},
-]
-
 export default function FavoritesList({ isOpen }) {
+	const favorites = useSelector((state) => state.favorites)
 	const show = isOpen ? 'favorites-list--show' : 'favorites-list'
 
 	return (
 		<ul className={`${show}`}>
-			{favorites.map((favorite) => (
-				<Favorite key={favorite.name} {...favorite} />
-			))}
+			{favorites.length > 0 ? (
+				favorites.map((favorite, idx) => (
+					<Favorite key={favorite.name} position={idx} {...favorite} />
+				))
+			) : (
+				<p className="favorites-list__no-favorites">No tienes favoritos</p>
+			)}
 		</ul>
 	)
 }

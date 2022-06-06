@@ -29,12 +29,10 @@ export default function useRequest({ endpoint, method = 'GET', ...args }) {
 	}
 
 	useEffect(() => {
-		if (data.length > 0) return
-
 		if (method === 'GET') {
 			request()
 		}
-	}, [])
+	}, [endpoint])
 
 	return { data, loading, error, request }
 }

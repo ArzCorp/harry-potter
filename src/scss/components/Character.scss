@@ -73,6 +73,9 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+	&__is-favorite {
+		filter: brightness(0) saturate(100%);
+	}
 	&__name {
 		white-space: nowrap;
 		font-size: $font-subtitle;
