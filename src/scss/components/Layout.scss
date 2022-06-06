@@ -6,9 +6,16 @@
 	background-repeat: no-repeat;
 	background-color: black;
 	background-position: top;
+	@media (max-width: 720px) {
+		padding-bottom: 50px;
+		background-image: none;
+	}
 	&__container {
 		width: 90%;
 		margin: 0 auto;
 		padding: 20px 0;
+		@media (max-width: 720px) {
+			width: 100%;
+		}
 	}
 }

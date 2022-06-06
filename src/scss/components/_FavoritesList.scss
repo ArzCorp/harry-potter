@@ -1,0 +1,28 @@
+.favorites-list {
+	display: none;
+	position: absolute;
+	z-index: 10;
+	top: 33px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	padding: 13px;
+	padding-bottom: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background-color: $purple-color;
+	color: white;
+	@media (max-width: 720px) {
+		height: 200px;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		top: -198px;
+		overflow-y: auto;
+	}
+	&--show {
+		@extend .favorites-list;
+		display: block;
+	}
+}

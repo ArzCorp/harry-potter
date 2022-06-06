@@ -1,11 +1,18 @@
 .character {
-	width: 100%;
-	max-width: 515px;
-	min-width: min-content;
-	max-height: 265px;
-	border-radius: 16px;
-	background-color: white;
+	width: 515px;
 	display: flex;
+	background-color: white;
+	border-radius: 16px;
+	@media (max-width: 720px) {
+		display: block;
+	}
+	@media (max-width: 720px) {
+		width: 140px;
+	}
+	&--dead {
+		@extend .character;
+		background-color: $gray-color;
+	}
 	&__img {
 		width: 50%;
 		border-top-left-radius: 16px;
@@ -14,6 +21,13 @@
 		justify-content: center;
 		align-items: center;
 		padding: 37px 22px;
+		@media (max-width: 720px) {
+			border-bottom-left-radius: 0px;
+			border-top-right-radius: 16px;
+			padding: 0px;
+			width: 140px;
+			min-height: 140px;
+		}
 	}
 	&__img img {
 		margin: 0 auto;
@@ -21,18 +35,38 @@
 		width: 100%;
 		height: 75%;
 		object-fit: cover;
+		@media (max-width: 720px) {
+			width: 100px;
+			height: 100px;
+		}
 	}
 	&__details {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-content: space-between;
 		padding: 22px 20px 22px 25px;
-	}
-	&__details--dead {
-		@extend .character__details;
-		background-color: $gray-color;
+		border-top-right-radius: 16px;
+		border-bottom-right-radius: 16px;
+		@media (max-width: 720px) {
+			flex-direction: column-reverse;
+			padding: 11px 9px;
+			border-top-right-radius: 0px;
+			border-bottom-left-radius: 16px;
+		}
 	}
 	&__details p {
 		font-size: $font-base;
 		margin-bottom: 8px;
+		@media (max-width: 720px) {
+			display: none;
+			font-size: 0.688rem;
+		}
+	}
+	&__details .character__is-alive {
+		display: block;
+		margin-bottom: 0px;
+		margin-right: 10px;
 	}
 	&__icon-container {
 		display: flex;
@@ -43,6 +77,13 @@
 		white-space: nowrap;
 		font-size: $font-subtitle;
 		margin: 23px 0px;
+		@media (max-width: 720px) {
+			margin: 18px 0px;
+			margin-top: 0px;
+			text-align: center;
+			font-size: 1.125rem;
+			white-space: initial;
+		}
 	}
 }
 

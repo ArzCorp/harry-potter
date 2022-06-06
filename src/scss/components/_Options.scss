@@ -1,0 +1,20 @@
+.options {
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+	&__label {
+		display: block;
+		font-weight: 400;
+	}
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 80px;
+		flex-wrap: wrap;
+	}
+	&__option {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+}

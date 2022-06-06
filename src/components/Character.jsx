@@ -15,19 +15,19 @@ export default function Character({
 }) {
 	const isStudent = hogwartsStudent ? '/ ESTUDIANTE' : '/ STAFF'
 	const isAlive = alive ? 'VIVO ' : 'FINADO '
-	const isAliveColor = alive ? 'character__details' : 'character__details--dead'
+	const isAliveColor = alive ? 'character' : 'character--dead'
 
 	return (
-		<div className="character">
+		<div className={`${isAliveColor}`}>
 			<figure
 				className={`${house ? house.toLowerCase() : 'bg-color'} character__img`}
 			>
 				<img src={image} alt={`Foto ${name}`} />
 			</figure>
-			<div className={`${isAliveColor}`}>
+			<div className="character__details">
 				<div className="character__icon-container">
-					<p>{`${isAlive}${isStudent}`}</p>
-					<Icon icon={favoriteIcon} />
+					<p className="character__is-alive">{`${isAlive}${isStudent}`}</p>
+					<Icon icon={favoriteIcon} alt="Agregar a favoritos" />
 				</div>
 				<h2 className="character__name">
 					{!alive ? <b>+</b> : ''} {name}
